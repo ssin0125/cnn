@@ -82,7 +82,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint
 history = model.fit(
     train_gen,
     validation_data=test_gen, # 검증 데이터를 넣어주면 한 epoch이 끝날때마다 자동으로 검증
-    epochs=20, # epochs 복수형으로 쓰기!
+    epochs=20, # epochs 복수형으로 쓰기
     callbacks=[
       ModelCheckpoint('model.h5', monitor='val_acc', verbose=1, save_best_only=True)
     ]
